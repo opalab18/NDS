@@ -10,7 +10,7 @@ html,body{
 }
 .navbar-trans{
 	background-color: rgba(0,0,0,0);
-	padding: 9px 0px 9px 20px;
+	padding: 9px 20px 9px 20px;
 	transition: all .5s ease;
 	-webkit-transition: all .5s ease;
 }
@@ -28,7 +28,7 @@ html,body{
 	background-color: black;
 	transition: all .5s ease ;
 	-webkit-transition: all .5s ease ;
-	padding: 5px 0px 5px 20px;
+	padding: 5px 20px 5px 20px;
 }
 .navbar-header>a:hover{
 	background-color:white;
@@ -59,21 +59,11 @@ html,body{
 	animation: social 500ms infinite;
 }
 @keyframes social {
-	0% {
-		text-shadow: 5px 4px #8ec8ff, -5px -6px #8ec8ff;
-	}
-	25% {
-		text-shadow: -5px -6px #8ec8ff, 5px 4px #8ec8ff;
-	}
-	50% {
-		text-shadow: 5px -4px #8ec8ff, -8px 4px #8ec8ff;
-	}
-	75% {
-		text-shadow: -8px -4px #8ec8ff, -5px -4px #8ec8ff;
-	}
-	100% {
-		text-shadow: -5px 0 #8ec8ff, 5px -4px #8ec8ff;
-	}
+	0% { text-shadow: 5px 4px #8ec8ff, -5px -6px #8ec8ff; }
+	25% { text-shadow: -5px -6px #8ec8ff, 5px 4px #8ec8ff; }
+	50% { text-shadow: 5px -4px #8ec8ff, -8px 4px #8ec8ff; }
+	75% { text-shadow: -8px -4px #8ec8ff, -5px -4px #8ec8ff; }
+	100% { text-shadow: -5px 0 #8ec8ff, 5px -4px #8ec8ff; }
 }
 hr{
 	max-width: 100px;
@@ -88,12 +78,14 @@ hr{
 .hrblue{
 	border-color: #8ec8ff;
 }
-.cover{
+.cover, #prefoot, #uslugefoot{
 	background: url(../img/cover3.jpg) no-repeat fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+.cover{
 	display: block;
 	height: auto;
 	width: 100%;
@@ -128,14 +120,16 @@ hr{
 	from { opacity: 0; }
 	to { opacity: 1; }
 }
-.cover-text h2{
-	font-size: 40px;
-	letter-spacing: 3px;
+.cover-text h2, .cover-text h4{
 	-webkit-animation: fadein 2s ease;
 	-moz-animation: fadein 2s ease;
 	-ms-animation: fadein 2s ease;
 	-o-animation: fadein 2s ease;
 	animation: fadein 2s ease;
+}
+.cover-text h2{
+	font-size: 40px;
+	letter-spacing: 3px;
 }
 .cover-text h2 > span{
 	color: #8ec8ff;
@@ -147,11 +141,6 @@ hr{
 	font-size: 30px;
 	color: #8ec8ff;
 	margin-bottom: 50px;
-	-webkit-animation: fadein 2s;
-	-moz-animation: fadein 2s;
-	-ms-animation: fadein 2s;
-	-o-animation: fadein 2s;
-	animation: fadein 2s;
 }
 @media (max-width: 768px){
 	.navbar {
@@ -181,6 +170,30 @@ hr{
 	hr{
 		margin-top: 20px;
 		margin-bottom: 20px;
+	}
+	#about{
+		padding: 10px 0px;
+	}
+	#about h2, #tracks h2, #tracks2 h2, #poverenje h2, #footer h2{
+		font-size: 25px;
+	}
+	#about li{
+		font-weight: bold;
+		font-size: 16px;
+	}
+	#poverenje{
+		background-color:#f8f8f8;
+		padding:20px 0px;
+		text-align:center;
+	}
+	#footer{
+		padding:10px 0px;
+	}
+	#footer p{
+		font-size: 15px;
+	}
+	.facol{
+		font-size: 2em;
 	}
 }
 @media (max-width: 992px){
@@ -251,18 +264,6 @@ hr{
 	75%{ top:0%; left:60%; }
 	100%{ top:60%; left:60%; }
 }
-@media (max-width: 768px){
-	#about{
-		padding: 10px 0px;
-	}
-	#about h2{
-		font-size: 25px;
-	}
-	#about li{
-		font-weight: bold;
-		font-size: 16px;
-	}
-}
 
 /* TRAKICA */
 #tracks, #tracks2, #tracks3{
@@ -279,13 +280,8 @@ hr{
 	margin:3% 0;
 	padding-bottom:3%;
 }
-#tracks span{
+#tracks span, #footer h2, #footer p, #footer h3, .facol{
     color:#8ec8ff;
-}
-@media (max-width: 768px){
-	#tracks h2, #tracks2 h2{
-		font-size: 23px;
-	}
 }
 
 /* POVERENJE */
@@ -316,31 +312,30 @@ hr{
 .over{
 	text-align:center;
 }
-.hvrbox,
-.hvrbox * {
+.hvrbox, .hvrbox *{
 	box-sizing: border-box;
 }
-.hvrbox {
+.hvrbox{
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
 	max-width: 100%;
 	height: auto;
 }
-.hvrbox img {
+.hvrbox img{
 	max-width: 100%;
 }
-.hvrbox .hvrbox-layer_bottom {
+.hvrbox .hvrbox-layer_bottom{
 	display: block;
 	width:300px;
 	height:180px;
 }
-.hvrbox-layer_bottom2 {
+.hvrbox-layer_bottom2{
 	display: block;
 	width:100%;
 	height:auto;
 }
-.hvrbox .hvrbox-layer_top, .hvrbox .hvrbox-layer_top1 {
+.hvrbox .hvrbox-layer_top, .hvrbox .hvrbox-layer_top1{
 	opacity: 0;
 	position: absolute;
 	top: 0;
@@ -359,16 +354,16 @@ hr{
 .hvrbox .hvrbox-layer_top{
 	background-color:white;
 }
-.hvrbox:hover .hvrbox-layer_top, .hvrbox.active .hvrbox-layer_top {
+.hvrbox:hover .hvrbox-layer_top, .hvrbox.active .hvrbox-layer_top{
 	opacity: 1;
 }
-.hvrbox .hvrbox-layer_slideup {
+.hvrbox .hvrbox-layer_slideup{
 	-moz-transform: translateY(100%);
 	-webkit-transform: translateY(100%);
 	-ms-transform: translateY(100%);
 	transform: translateY(100%);
 }
-.hvrbox:hover .hvrbox-layer_slideup, .hvrbox.active .hvrbox-layer_slideup {
+.hvrbox:hover .hvrbox-layer_slideup, .hvrbox.active .hvrbox-layer_slideup{
 	-moz-transform: translateY(0);
 	-webkit-transform: translateY(0);
 	-ms-transform: translateY(0);
@@ -377,21 +372,21 @@ hr{
 .hvrbox-text p{
 	padding:10px;
 	font-size:1.1em;
-	color:#777;
+	color: gray;
 }
 .hvrbox-text1 p{
 	font-size:1.7em;
 	text-align:center;
 	color:#777;
 }
-#zoom{
+#zoom, #zoom2, #zoom3, #zoom4{
 	transition: all .4s ease-in-out;
 	-webkit-transition: all .4s ease-in-out;
 	-moz-transition: all .4s ease-in-out;
 	-o-transition: all .4s ease-in-out;
 	-ms-transition: all .4s ease-in-out;
 }
-.zoom{
+.zoom, .zoom2, .zoom3, .zoom4{
 	-moz-box-shadow: 0 0 10px #ccc;
 	-webkit-transform: scale(1.1); 
     -moz-transform: scale(1.1);
@@ -399,70 +394,9 @@ hr{
     transform: scale(1.1);
 	box-shadow: 0 0 10px #ccc;
 }
-#zoom2{
-	transition : all .4s ease-in-out;
-	-webkit-transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	-o-transition: all .4s ease-in-out;
-	-ms-transition: all .4s ease-in-out;
-}
-.zoom2{
-	-moz-box-shadow: 0 0 10px #ccc;
-	-webkit-transform: scale(1.1); 
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-	box-shadow: 0 0 10px #ccc;
-}
-#zoom3{
-	transition: all .4s ease-in-out;
-	-webkit-transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	-o-transition: all .4s ease-in-out;
-	-ms-transition: all .4s ease-in-out;
-}
-.zoom3{
-	-moz-box-shadow: 0 0 10px #ccc;
-	-webkit-transform: scale(1.1); 
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-	box-shadow: 0 0 10px #ccc;
-}
-#zoom4{
-	transition: all .4s ease-in-out;
-	-webkit-transition: all .4s ease-in-out;
-	-moz-transition: all .4s ease-in-out;
-	-o-transition: all .4s ease-in-out;
-	-ms-transition: all .4s ease-in-out;
-}
-.zoom4{
-	-moz-box-shadow: 0 0 10px #ccc;
-	-webkit-transform: scale(1.1); 
-    -moz-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-	box-shadow: 0 0 10px #ccc;
-}
-@media (max-width: 768px){
-	#poverenje{
-		background-color:#f8f8f8;
-		padding:20px 0px;
-		text-align:center;
-	}
-	#poverenje h2{
-		font-size: 25px;
-	}
-}
-
 
 /* 3 SLIKE */
 #prefoot{
-	background: url(../img/cover3.jpg) no-repeat fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	padding:5% 0px;
 }
 #prefoot img{
@@ -471,18 +405,13 @@ hr{
 	box-shadow: 0 14px 18px 0 rgba(0, 0, 0, 0.2), 0 16px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 /* FOOTER */
 #footer{
 	background-color:#708090;
 	padding:20px 0px;
 }
 #footer h2, #footer p{
-	color:#8ec8ff;
 	text-align:center;
-}
-#footer h3{
-	color:#8ec8ff;
 }
 #footer p{
 	font-size:18px;
@@ -497,24 +426,8 @@ hr{
 	text-align:center;
 }
 .facol{
-	color:#8ec8ff;
 	font-size: 40px;
 }
-@media (max-width: 768px){
-	#footer{
-		padding:10px 0px;
-	}
-	#footer h2 {
-		font-size: 23px;
-	}
-	#footer p{
-		font-size: 15px;
-	}
-	.facol{
-		font-size: 2em;
-	}
-}
-
 .btt{
 	position:fixed;
 	bottom:20px;
@@ -527,7 +440,7 @@ hr{
 	transition: all .5s ease;
 	cursor: pointer;
 }
-.btt .fa:hover{
+.btt .fa:hover, #tracks2 span{
 	color: #8ec8ff;
 }
 
@@ -542,19 +455,10 @@ hr{
 #tracks2{
 	margin-top: 3%;
 }
-#tracks2 span{
-	color: #8ec8ff;
-}
-
 #usluge table{
 	margin: 3% 0;
 }
 #uslugefoot{
-	background: url(../img/cover3.jpg) no-repeat fixed; 
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
 	padding: 3% 0;
 	text-align: center;
 	color: white;
@@ -564,7 +468,7 @@ hr{
 	height: auto;
 	border-radius: 10px;
 }
-#uslugefoot h2, p{
+#uslugefoot h2 p{
 	margin-bottom: 5%;
 	text-shadow: 2px 2px 0px black;
 }
